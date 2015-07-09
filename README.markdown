@@ -75,7 +75,7 @@ It is based on the [DOM Standard](https://dom.spec.whatwg.org/#events) and follo
 
     Register an event handler of a specific custom event type on the Class.
 
-**[instance.addEventListener(type {String}, eventHandler {Function})]((https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener))**
+**[instance.addEventListener(type {String}, eventHandler {Function})](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)**
 
     Register an event handler of a specific custom event type on the instanced object.
 
