@@ -72,17 +72,29 @@ It is based on the [DOM Standard](https://dom.spec.whatwg.org/#events) and follo
 #### Methods.
 
 **[Class.addEventListener(type {String}, eventHandler {Function})](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)**
+
     Register an event handler of a specific custom event type on the Class.
+
 **[instance.addEventListener(type {String}, eventHandler {Function})]((https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener))**
+
     Register an event handler of a specific custom event type on the instanced object.
+
 **[Class.removeEventListener(type {String}, eventHandler {Function})](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)**
+
     Removes an event listener from the Class.
+
 **[instance.removeEventListener(type {String}, eventHandler {Function})](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)**
+
     Removes an event listener from the Class.
+
 **[Class.dispatchEvent(type {String}, data {Object})](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent)**
+
     Dispatch a custom even to this Class.
+
 **[instance.dispatchEvent(type {String}, data {Object})](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent)**
+
     Dispatch a custom even to this instanced object.
+
 
 #### Usage Samples.
 
