@@ -3,6 +3,30 @@ Module('CustomEventSupport')({
     eventListeners : null,
 
     bind : function(type, eventHandler) {
+        if (console && console.warn) {
+            console.warn('bind is deprecated, use addEventListener instead.');
+        }
+
+        return CustomEventSupport.addEventListener(type, eventHandler);
+    },
+
+    unbind : function(type, eventHandler) {
+        if (console && console.warn) {
+            console.warn('unbind is deprecated, use removeEventListener instead.');
+        }
+
+        return CustomEventSupport.addEventListener(type, eventHandler);
+    },
+
+    dispatch : function(type, eventHandler) {
+        if (console && console.warn) {
+            console.warn('dispatch is deprecated, use dispatchEvent instead.');
+        }
+
+        return CustomEventSupport.dispatchEvent(type, eventHandler);
+    },
+
+    addEventListener : function(type, eventHandler) {
         var found, i, listeners;
 
         if(!this.eventListeners) {
@@ -30,7 +54,7 @@ Module('CustomEventSupport')({
         return this;
     },
 
-    unbind : function(type, eventHandler) {
+    removeEventListener : function(type, eventHandler) {
         var i, found, listeners;
 
         found  = false;
@@ -58,7 +82,7 @@ Module('CustomEventSupport')({
         return this;
     },
 
-    dispatch : function(type, data) {
+    dispatchEvent : function(type, data) {
             var event, listeners, instance, i;
 
             if (this.eventListeners === null) {
@@ -92,6 +116,30 @@ Module('CustomEventSupport')({
         eventListeners : null,
 
         bind : function(type, eventHandler) {
+            if (console && console.warn) {
+                console.warn('bind is deprecated, use addEventListener instead.');
+            }
+
+            return this.addEventListener(type, eventHandler);
+        },
+
+        unbind : function(type, eventHandler) {
+            if (console && console.warn) {
+                console.warn('unbind is deprecated, use removeEventListener instead.');
+            }
+
+            return this.removeEventListener(type, eventHandler);
+        },
+
+        dispatch : function(type, eventHandler) {
+            if (console && console.warn) {
+                console.warn('dispatch is deprecated, use dispatchEvent instead.');
+            }
+
+            return this.dispatchEvent(type, eventHandler);
+        },
+
+        addEventListener : function(type, eventHandler) {
             var found, i, listeners;
 
             if(!this.eventListeners) {
@@ -119,7 +167,7 @@ Module('CustomEventSupport')({
             return this;
         },
 
-        unbind : function(type, eventHandler) {
+        removeEventListener : function(type, eventHandler) {
             var i, found, listeners;
 
             found = false;
@@ -148,7 +196,7 @@ Module('CustomEventSupport')({
             return this;
         },
 
-        dispatch : function(type, data) {
+        dispatchEvent : function(type, data) {
             var event, listeners, instance, i;
 
             if (this.eventListeners === null) {
