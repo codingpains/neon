@@ -52,7 +52,7 @@ As the web applications are getting more complex these times, backend and fronte
         }
     });
 
-## Neon´s Standard Library
+## Neon Standard Library
 
 Having a DSL to make our classes readable and consistent is nice, but having a
 set of tools in a standard library is a lot better.
@@ -64,7 +64,7 @@ set of tools in a standard library is a lot better.
 
 ### CustomEventSupport
 
-Gives your objects the capability of dispatch events and have such events listened
+Gives your objects and classes the capability to dispatch events and have such events listened
 by other objects.
 
 It is based on the [DOM Standard](https://dom.spec.whatwg.org/#events) and follows the same API.
@@ -96,7 +96,7 @@ It is based on the [DOM Standard](https://dom.spec.whatwg.org/#events) and follo
     Dispatch a custom even to this instanced object.
 
 
-#### Usage Samples.
+#### Custom Event Support Usage Samples.
 
 ```
     require('neon');
@@ -117,7 +117,7 @@ It is based on the [DOM Standard](https://dom.spec.whatwg.org/#events) and follo
             },
 
             pushDown : function() {
-                this.dispatch('pushed', {data : {value : this.value}});
+                this.dispatchEvent('pushed', {data : {value : this.value}});
             },
 
             _bindListeners : function() {
